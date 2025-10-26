@@ -1,6 +1,12 @@
 namespace ZooApp.Domain.Animals;
 
-public class Herbo
+public abstract class Herbo : Animal
 {
-    
+    public int Kindness { get; init; }
+
+    protected Herbo(string name, int number, int food, int kindness) : base (name, number, food)
+    {
+        Kindness = kindness;
+    }
+
 }
